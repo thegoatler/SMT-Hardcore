@@ -3,10 +3,7 @@
 
 # SMT-Hardcore
 ### Adds death and damage to Supermarket Together
-Currently Implemented (Non-Features):
-- Pressing "h" on the keyboard deals 10 damage (for debug)
-- An utterly insane amount of console outputs for debug
-FEATURES:
+Currently Implemented (Features):
 - Getting hit with broom deals 10 damage
 - Health Bar at top of screen
 - Products not found deals damage
@@ -19,4 +16,4 @@ FEATURES:
 
 Credits:
 - Damntry for teaching me how to do this and implementing a good portion of the project
-- Mitche for providing the required functions to tap into to trigger damage
+- Mitche for also teaching me how to do this and helping with a significant portion as well
