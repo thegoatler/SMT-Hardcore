@@ -135,9 +135,7 @@ public class UIManager : MonoBehaviour
         canvasGO.transform.SetParent(GameCanvas.Instance.transform, false);
 
         HealthMod.Logger.LogInfo("canvasgo applied to gamecanvas");
-        /*
-         * Then Jesus said to his disciples, “Whoever wishes to come after me must deny himself,[a] take up his cross, and follow me. - Matthew 16:24
-         */
+        */
     }
 
     void Update()
@@ -148,7 +146,7 @@ public class UIManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            playerHealth.TakeDamage(10f); // Press H to take damage
+            playerHealth.Die(0f); // Press H to die
         }
     }
 }
