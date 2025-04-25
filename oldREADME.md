@@ -1,4 +1,4 @@
-![Banner Image](https://github.com/thegoatler/SMT-Hardcore/blob/main/image.png)
+![Banner Image](https://github.com/thegoatler/SMT-Hardcore/blob/main/banner.png)
 
 
 # SMT-Hardcore
