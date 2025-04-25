@@ -16,4 +16,4 @@ Currently Implemented (Features):
 
 Credits:
 - Damntry for teaching me how to do this and implementing a good portion of the project
-- Mitche for providing the required functions to tap into to trigger damage
+- Mitche for also teaching me how to do this and helping with a significant portion as well
