@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
-    public float costOfDeath = -200f;
+    public float costOfDeath = -500f;
 
     void Start()
     {
