@@ -6,11 +6,9 @@
 Currently Implemented (Non-Features):
 - Pressing "h" on the keyboard deals 10 damage (for debug)
 - An utterly insane amount of console outputs for debug
-Currently Implemented (FEATURES):
+FEATURES:
 - Getting hit with broom deals 10 damage
 - Health Bar at top of screen
-
-Future Implementations:
 - Products not found deals damage
 - Products too expensive deals damage
 - Products stolen deals damage
