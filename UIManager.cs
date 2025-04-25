@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public static PlayerHealth playerHealth;
     public static void SpawnHealthUI()
     {
-        HealthMod.Logger.LogInfo("SpawnHealthUI started");
+        //HealthMod.Logger.LogInfo("SpawnHealthUI started");
 
         //Damntry: Pretty sure player object does not exist.
         //  You can use the class FirstPersonController to get access to most player functions.
@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
             player.AddComponent<PlayerHealth>();
 
         playerHealth = player.GetComponent<PlayerHealth>();
-        HealthMod.Logger.LogInfo("Playerhealth set to playerhealth");
+        //HealthMod.Logger.LogInfo("Playerhealth set to playerhealth");
         
         //most of this is ChatGPT after this line
         var canvasGO = new GameObject("HealthCanvas");
@@ -92,7 +92,7 @@ public class UIManager : MonoBehaviour
 
         healthSlider.fillRect = fillRT;
 
-        HealthMod.Logger.LogInfo("Health slider made");
+        //HealthMod.Logger.LogInfo("Health slider made");
         if (canvasGO.GetComponent<UIManager>() == null)
             canvasGO.AddComponent<UIManager>();
         /*OLD CODE, no clue why its still in here but its funny

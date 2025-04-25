@@ -18,7 +18,7 @@ namespace GoatlerSMTHealth
         public static void elizabeth(FirstPersonController __instance)
         {
             UIManager.SpawnHealthUI();
-            HealthMod.Logger.LogInfo("Health UI Spawn Triggered");
+            //HealthMod.Logger.LogInfo("Health UI Spawn Triggered");
         }
     }
 }

@@ -18,9 +18,9 @@ namespace GoatlerSMTHealth
         [HarmonyPostfix]
         public static void deleteBehaviourPatch(GameData __instance)
         {
-            HealthMod.Logger.LogInfo("DeleteBehaviour Invoked");
+            //HealthMod.Logger.LogInfo("DeleteBehaviour Invoked");
             UIManager.playerHealth.TakeDamage(10f);
-            HealthMod.Logger.LogInfo("Health Decreased");
+            //HealthMod.Logger.LogInfo("Health Decreased");
         }
 
         //Hook into the method adding to the expensive list
@@ -28,9 +28,9 @@ namespace GoatlerSMTHealth
         [HarmonyPostfix]
         public static void tooExpensivePatch(GameData __instance)
         {
-            HealthMod.Logger.LogInfo("Product Too Expensive");
+            //HealthMod.Logger.LogInfo("Product Too Expensive");
             UIManager.playerHealth.TakeDamage(5f);
-            HealthMod.Logger.LogInfo("Health Decreased");
+            //HealthMod.Logger.LogInfo("Health Decreased");
         }
 
         //Hook into the method adding to the not found list
@@ -38,9 +38,9 @@ namespace GoatlerSMTHealth
         [HarmonyPostfix]
         public static void notFoundPatch(GameData __instance)
         {
-            HealthMod.Logger.LogInfo("Product Not Found");
+            //HealthMod.Logger.LogInfo("Product Not Found");
             UIManager.playerHealth.TakeDamage(5f);
-            HealthMod.Logger.LogInfo("Health Decreased");
+            //HealthMod.Logger.LogInfo("Health Decreased");
         }
     }
 }

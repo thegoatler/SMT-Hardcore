@@ -13,9 +13,9 @@ public class HealthMod : BaseUnityPlugin
     void Awake()
     {
         HealthMod.Logger = base.Logger;
-        HealthMod.Logger.LogInfo("Beforer patches");
+        //HealthMod.Logger.LogInfo("Beforer patches");
         harmonyThingySomethingUhh.PatchAll();
-        HealthMod.Logger.LogInfo("After patches");
+        //HealthMod.Logger.LogInfo("After patches");
         //I hate you. Because of the name, you were going good.
         //im not sure what its gonna do so idkj what to call it
         //Create object of Harmony type

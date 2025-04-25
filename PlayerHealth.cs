@@ -28,9 +28,9 @@ public class PlayerHealth : MonoBehaviour
     {
         //hook into this function to remove money when you die
         GameData.Instance.CmdAlterFunds(costOfDeath);
-        HealthMod.Logger.LogInfo("Send Player to jail");
+        //HealthMod.Logger.LogInfo("Send Player to jail");
         FirstPersonController.Instance.GetComponent<PlayerPermissions>().UserCode_RpcJPlayer__Int32(10);
-        HealthMod.Logger.LogInfo("Sent player to jaill");
+        //HealthMod.Logger.LogInfo("Sent player to jaill");
         currentHealth = maxHealth;
     }
 }

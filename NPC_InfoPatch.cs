@@ -15,7 +15,7 @@ namespace GoatlerSMTHealth
         {
             if (__instance.isAThief)
             {
-                HealthMod.Logger.LogInfo("Thief Got away");
+                //HealthMod.Logger.LogInfo("Thief Got away");
                 UIManager.playerHealth.TakeDamage(20f);
             }
             
