@@ -1,4 +1,5 @@
 using System.Runtime.Remoting;
+using Mirror;
 using StarterAssets;
 using UnityEngine;
 
@@ -23,11 +24,10 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
     }
-
     public void Die(float cost)
     {
-        //hook into this function to remove money when you die
-        GameData.Instance.CmdAlterFunds(cost);
+        //call this function to remove money when you die
+        GameData.Instance.UserCode_CmdAlterFunds__Single(cost);
         //HealthMod.Logger.LogInfo("Send Player to jail");
         FirstPersonController.Instance.GetComponent<PlayerPermissions>().UserCode_RpcJPlayer__Int32(10);
         //HealthMod.Logger.LogInfo("Sent player to jaill");
