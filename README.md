@@ -2,7 +2,7 @@
 
 
 # SMT-Hardcore
-### Adds death and damage to Supermarket Together
+### A fully customizable mod that adds death and damage to Supermarket Together
 Currently Implemented (Features):
 - Getting hit with broom deals 10 damage
 - Health Bar at top of screen
