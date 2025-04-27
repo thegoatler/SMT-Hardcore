@@ -17,7 +17,7 @@ namespace GoatlerSMTHealth
         public static void broomHitPatch(PlayerNetwork __instance)
         {
             //HealthMod.Logger.LogInfo("Broom Smack InvokeRPC Triggered");
-            UIManager.playerHealth.TakeDamage(10f);
+            UIManager.playerHealth.TakeDamage(HealthMod.BroomDamage.Value);
             //HealthMod.Logger.LogInfo("Health Decreased");
         }
     }

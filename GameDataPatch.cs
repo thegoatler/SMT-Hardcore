@@ -19,7 +19,7 @@ namespace GoatlerSMTHealth
         public static void deleteBehaviourPatch(GameData __instance)
         {
             //HealthMod.Logger.LogInfo("DeleteBehaviour Invoked");
-            UIManager.playerHealth.TakeDamage(10f);
+            UIManager.playerHealth.TakeDamage(HealthMod.DeleteDamage.Value);
             //HealthMod.Logger.LogInfo("Health Decreased");
         }
 
@@ -29,7 +29,7 @@ namespace GoatlerSMTHealth
         public static void tooExpensivePatch(GameData __instance)
         {
             //HealthMod.Logger.LogInfo("Product Too Expensive");
-            UIManager.playerHealth.TakeDamage(5f);
+            UIManager.playerHealth.TakeDamage(HealthMod.TooExpensiveDamage.Value);
             //HealthMod.Logger.LogInfo("Health Decreased");
         }
 
@@ -39,7 +39,7 @@ namespace GoatlerSMTHealth
         public static void notFoundPatch(GameData __instance)
         {
             //HealthMod.Logger.LogInfo("Product Not Found");
-            UIManager.playerHealth.TakeDamage(5f);
+            UIManager.playerHealth.TakeDamage(HealthMod.NotFoundDamage.Value);
             //HealthMod.Logger.LogInfo("Health Decreased");
         }
     }

@@ -1,4 +1,5 @@
 using System.Runtime.Remoting;
+using BepInEx;
 using Mirror;
 using StarterAssets;
 using UnityEngine;
@@ -7,7 +8,6 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
-    public float costOfDeath = -500f;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
-        if (currentHealth <= 0) Die(costOfDeath);
+        if (currentHealth <= 0) Die(-HealthMod.DeathCost.Value);
     }
 
     public void Heal(float amount)
@@ -29,7 +29,8 @@ public class PlayerHealth : MonoBehaviour
         //call this function to remove money when you die
         GameData.Instance.UserCode_CmdAlterFunds__Single(cost);
         //HealthMod.Logger.LogInfo("Send Player to jail");
-        FirstPersonController.Instance.GetComponent<PlayerPermissions>().UserCode_RpcJPlayer__Int32(10);
+        if(HealthMod.SendToJail.Value)
+            FirstPersonController.Instance.GetComponent<PlayerPermissions>().UserCode_RpcJPlayer__Int32(10);
         //HealthMod.Logger.LogInfo("Sent player to jaill");
         currentHealth = maxHealth;
     }

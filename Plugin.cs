@@ -1,21 +1,70 @@
 using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using Michsky.MUIP;
 using StarterAssets;
 using UnityEngine;
 
-[BepInPlugin("com.thegoatler.healthmod", "SMT Hardcore", "1.0")]
+[BepInPlugin("GoatlerSMTHealth", "SMT Hardcore", "1.1")]
 public class HealthMod : BaseUnityPlugin
 {
     public new static ManualLogSource Logger;
     private static Harmony harmonyThingySomethingUhh = new Harmony("harmonyThingySomethingUhh");
+
+    public static ConfigEntry<float> DeathCost;
+    public static ConfigEntry<bool> SendToJail;
+    public static ConfigEntry<float> BroomDamage;
+    public static ConfigEntry<float> DeleteDamage;
+    public static ConfigEntry<float> NotFoundDamage;
+    public static ConfigEntry<float> ThiefDamage;
+    public static ConfigEntry<float> TooExpensiveDamage;
+
     void Awake()
     {
+        /*
+         * General.Death Config Creation
+         */
+        DeathCost = Config.Bind("General.Death",
+                                       "DeathCost",
+                                       500f,
+                                       "This is the amount of money you will lose when you die, pick a negative value zero or higher.");
+
+        SendToJail = Config.Bind("General.Death",
+                                        "SendToJail",
+                                        true,
+                                        "Should the player be sent to jail when they die?");
+
+        /*
+         * General.Damage Config Creation
+         */
+        BroomDamage = Config.Bind("General.Damage",
+                                        "BroomDamage",
+                                        20f,
+                                        "How much damage should it deal when hit with a broom?");
+        
+        DeleteDamage = Config.Bind("General.Damage",
+                                        "DeleteDamage",
+                                        5f,
+                                        "How much damage should it deal when deleting something from your store?");
+
+        NotFoundDamage = Config.Bind("General.Damage",
+                                        "NotFoundDamage",
+                                        10f,
+                                        "How much damage should it deal when a customer can't find a product they're looking for?");
+
+        ThiefDamage = Config.Bind("General.Damage",
+                                       "ThiefDamage",
+                                       10f,
+                                       "How much damage should it deal when a thief successfully robs your store?");
+
+        TooExpensiveDamage = Config.Bind("General.Damage",
+                                       "TooExpensiveDamage",
+                                       10f,
+                                       "How much damage should it deal when a customer finds an item that's too expensive?");
+
         HealthMod.Logger = base.Logger;
-        //HealthMod.Logger.LogInfo("Beforer patches");
         harmonyThingySomethingUhh.PatchAll();
-        //HealthMod.Logger.LogInfo("After patches");
         //I hate you. Because of the name, you were going good.
         //im not sure what its gonna do so idkj what to call it
         //Create object of Harmony type
