@@ -10,6 +10,7 @@ Currently Implemented (Features):
 - Products too expensive deals damage
 - Products stolen deals damage
 - Deleting things in the store deals damage
+- Overdue loans deal damage based on how long overdue they are
 - Running out of health sends to jail
 - Running out of health loses money
 - Probably more at some point, gotta learn how to do the rest first
