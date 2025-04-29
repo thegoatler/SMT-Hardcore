@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         GameData.Instance.UserCode_CmdAlterFunds__Single(cost);
         //HealthMod.Logger.LogInfo("Send Player to jail");
         if(HealthMod.SendToJail.Value)
-            FirstPersonController.Instance.GetComponent<PlayerPermissions>().UserCode_RpcJPlayer__Int32(10);
+            FirstPersonController.Instance.GetComponent<PlayerPermissions>().UserCode_RpcJPlayer__Int32(HealthMod.NumJailClicks.Value);
         //HealthMod.Logger.LogInfo("Sent player to jaill");
         currentHealth = maxHealth;
     }

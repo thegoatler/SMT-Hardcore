@@ -14,6 +14,7 @@ public class HealthMod : BaseUnityPlugin
 
     public static ConfigEntry<float> DeathCost;
     public static ConfigEntry<bool> SendToJail;
+    public static ConfigEntry<int> NumJailClicks;
     public static ConfigEntry<float> BroomDamage;
     public static ConfigEntry<float> DeleteDamage;
     public static ConfigEntry<float> NotFoundDamage;
@@ -35,6 +36,11 @@ public class HealthMod : BaseUnityPlugin
                                         "SendToJail",
                                         true,
                                         "Should the player be sent to jail when they die?");
+
+        NumJailClicks = Config.Bind("General.Death",
+                                        "NumJailClicks",
+                                        10,
+                                        "When the player gets sent to jail on death, how many times should they have to click to escape?");
 
         /*
          * General.Damage Config Creation
