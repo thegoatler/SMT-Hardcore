@@ -1,0 +1,8 @@
+{
+    "name": "SMTHardcore",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/thegoatler/SMT-Hardcore",
+    "description": "A mod that adds a health bar, damage, and death to supermarket together",
+    "dependencies": [
+    ]
+}
