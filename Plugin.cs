@@ -19,6 +19,7 @@ public class HealthMod : BaseUnityPlugin
     public static ConfigEntry<float> NotFoundDamage;
     public static ConfigEntry<float> ThiefDamage;
     public static ConfigEntry<float> TooExpensiveDamage;
+    public static ConfigEntry<float> OverdueLoanDamage;
 
     void Awake()
     {
@@ -62,6 +63,11 @@ public class HealthMod : BaseUnityPlugin
                                        "TooExpensiveDamage",
                                        10f,
                                        "How much damage should it deal when a customer finds an item that's too expensive?");
+
+        OverdueLoanDamage = Config.Bind("General.Damage",
+                                       "OverdueLoanDamage",
+                                       5f,
+                                       "How much damage should it deal per day a loan is overdue?");
 
         HealthMod.Logger = base.Logger;
         harmonyThingySomethingUhh.PatchAll();
