@@ -54,6 +54,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Nexus\" />
+  </ItemGroup>
+
 
 
 

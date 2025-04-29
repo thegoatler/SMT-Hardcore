@@ -1,0 +1,3 @@
+Changelog:
+- Added a toggle for whether or not to receive damage in jail (default false)
+- Added a config entry to set how many clicks you need to get out of jail

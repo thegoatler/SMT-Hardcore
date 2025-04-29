@@ -6,7 +6,7 @@ using Michsky.MUIP;
 using StarterAssets;
 using UnityEngine;
 
-[BepInPlugin("GoatlerSMTHealth", "SMT Hardcore", "1.2")]
+[BepInPlugin("GoatlerSMTHealth", "SMT Hardcore", "1.3.0")]
 public class HealthMod : BaseUnityPlugin
 {
     public new static ManualLogSource Logger;
