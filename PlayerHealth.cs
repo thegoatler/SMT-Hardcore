@@ -1,5 +1,7 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Remoting;
 using BepInEx;
+using HutongGames.PlayMaker;
 using Mirror;
 using StarterAssets;
 using UnityEngine;
@@ -16,8 +18,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
-        if (currentHealth <= 0) Die(-HealthMod.DeathCost.Value);
+        NamedVariable[] arr = GameCanvas.Instance.jReference.GetComponent<PlayMakerFSM>().FsmVariables.GetAllNamedVariables();
+        if (arr[0].ToString() == "0" || HealthMod.ReceiveDamageInJail.Value)
+        {
+            currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
+            if (currentHealth <= 0) Die(-HealthMod.DeathCost.Value);
+        } 
     }
 
     public void Heal(float amount)

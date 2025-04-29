@@ -21,6 +21,7 @@ public class HealthMod : BaseUnityPlugin
     public static ConfigEntry<float> ThiefDamage;
     public static ConfigEntry<float> TooExpensiveDamage;
     public static ConfigEntry<float> OverdueLoanDamage;
+    public static ConfigEntry<bool> ReceiveDamageInJail;
 
     void Awake()
     {
@@ -75,6 +76,10 @@ public class HealthMod : BaseUnityPlugin
                                        5f,
                                        "How much damage should it deal per day a loan is overdue?");
 
+        ReceiveDamageInJail = Config.Bind("General.Damage",
+                                      "ReceiveDamageInJail",
+                                      false,
+                                      "Should damage be dealt to the player while in jail?");
         HealthMod.Logger = base.Logger;
         harmonyThingySomethingUhh.PatchAll();
         //I hate you. Because of the name, you were going good.

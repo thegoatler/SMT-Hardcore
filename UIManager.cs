@@ -147,7 +147,7 @@ public class UIManager : MonoBehaviour
         /*
         if (Input.GetKeyDown(KeyCode.H))
         {
-            playerHealth.Die(1f); // Press H to die
+            playerHealth.TakeDamage(10f); // Press H to die
         }
         */
        

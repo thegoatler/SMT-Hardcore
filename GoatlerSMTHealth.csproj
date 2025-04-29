@@ -28,6 +28,9 @@
     <Reference Include="Mirror">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Supermarket Together\Supermarket Together_Data\Managed\Mirror.dll</HintPath>
     </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Supermarket Together\Supermarket Together_Data\Managed\PlayMaker.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.StarterAssets">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Supermarket Together\Supermarket Together_Data\Managed\Unity.StarterAssets.dll</HintPath>
     </Reference>
