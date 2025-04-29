@@ -1,3 +1,2 @@
 Changelog:
-- Added a toggle for whether or not to receive damage in jail (default false)
-- Added a config entry to set how many clicks you need to get out of jail
+- Added a way to receive damage from overdue loans. If you take out a loan and forget to pay it off you will take damage multiplied by the number of days you've had the loan due for. For example, if I took out my loan on day 1 and it was due on day 3, and it is currently day 5, I will take 2 damage (day 5 - day 3) multiplied by the value in the config (default: 5) so I would take 10 damage in this instance.
