@@ -144,11 +144,12 @@ public class UIManager : MonoBehaviour
         {
             healthSlider.value = playerHealth.currentHealth;
         }
-        
+        /*
         if (Input.GetKeyDown(KeyCode.H))
         {
             playerHealth.Die(1f); // Press H to die
         }
+        */
        
     }
 }
