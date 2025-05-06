@@ -22,6 +22,8 @@ public class HealthMod : BaseUnityPlugin
     public static ConfigEntry<float> TooExpensiveDamage;
     public static ConfigEntry<float> OverdueLoanDamage;
     public static ConfigEntry<bool> ReceiveDamageInJail;
+    public static ConfigEntry<float> SetPricesDamage;
+    public static ConfigEntry<float> TimeAcceleratorDamage;
 
     void Awake()
     {
@@ -80,6 +82,16 @@ public class HealthMod : BaseUnityPlugin
                                       "ReceiveDamageInJail",
                                       false,
                                       "Should damage be dealt to the player while in jail?");
+
+        SetPricesDamage = Config.Bind("General.Damage",
+                                       "SetPricesDamage",
+                                       10f,
+                                       "How much damage should it deal when you use the pricing machine to set all prices?");
+
+        TimeAcceleratorDamage = Config.Bind("General.Damage",
+                                       "TimeAcceleratorDamage",
+                                       10f,
+                                       "How much damage should it deal when you use the clock on the wall to speed up time?");
         HealthMod.Logger = base.Logger;
         harmonyThingySomethingUhh.PatchAll();
         //I hate you. Because of the name, you were going good.

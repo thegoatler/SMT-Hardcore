@@ -1,3 +1,6 @@
 Changelog:
 - Added a toggle for whether or not to receive damage in jail (default false)
 - Added a config entry to set how many clicks you need to get out of jail
+- Added taking damage from setting all prices using the pricing machine
+- Added taking damage from using the clock in the manager room to speed up time
+- All new features are fully customizable in the config
