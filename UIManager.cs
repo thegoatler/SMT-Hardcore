@@ -30,11 +30,16 @@ public class UIManager : MonoBehaviour
         var canvas = canvasGO.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
 
+        var canvasRT = canvasGO.GetComponent<RectTransform>();
+        canvasRT.anchorMin = Vector2.zero;
+        canvasRT.anchorMax = Vector2.one;
+        canvasRT.offsetMin = Vector2.zero;
+        canvasRT.offsetMax = Vector2.zero;
+
+
         var scaler = canvasGO.AddComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new Vector2(1920, 1080);
+        scaler.matchWidthOrHeight = (float)Screen.width / Screen.height > (16f / 9f) ? 1 : 0;
         scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
-        scaler.matchWidthOrHeight = 0.5f;
 
         canvasGO.AddComponent<GraphicRaycaster>();
 
@@ -46,11 +51,15 @@ public class UIManager : MonoBehaviour
         sliderGO.transform.SetParent(canvasGO.transform, false);
 
         var rt = sliderGO.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(200, 20);
-        rt.anchorMin = new Vector2(0.5f, 1f);  // Top center
-        rt.anchorMax = new Vector2(0.5f, 1f);
-        rt.pivot = new Vector2(0.5f, 1f);      // Pivot from top center
-        rt.anchoredPosition = new Vector2(0, -40); // 40 units from top
+        rt.sizeDelta = new Vector2(300, 25);
+        rt.anchorMin = new Vector2(0.5f, 0f);
+        rt.anchorMax = new Vector2(0.5f, 0f);
+        rt.pivot = new Vector2(0.5f, 0f);
+        rt.anchoredPosition = new Vector2(0f, 40f); // 40 px above bottom
+
+
+
+
 
         // Configure slider
         healthSlider = sliderGO.GetComponent<Slider>();
@@ -90,7 +99,8 @@ public class UIManager : MonoBehaviour
         fillRT.offsetMin = Vector2.zero;
         fillRT.offsetMax = Vector2.zero;
 
-        healthSlider.fillRect = fillRT;
+        healthSlider.targetGraphic = fillImage;
+
 
         //HealthMod.Logger.LogInfo("Health slider made");
         if (canvasGO.GetComponent<UIManager>() == null)

@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Remoting;
 using BepInEx;
+using GoatlerSMTHealth;
 using HutongGames.PlayMaker;
 using Mirror;
 using StarterAssets;
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
             if (currentHealth <= 0) Die(-HealthMod.DeathCost.Value);
-        } 
+        }
     }
 
     public void Heal(float amount)

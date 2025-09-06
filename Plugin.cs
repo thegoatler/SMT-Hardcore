@@ -11,7 +11,6 @@ public class HealthMod : BaseUnityPlugin
 {
     public new static ManualLogSource Logger;
     private static Harmony harmonyThingySomethingUhh = new Harmony("harmonyThingySomethingUhh");
-
     public static ConfigEntry<float> DeathCost;
     public static ConfigEntry<bool> SendToJail;
     public static ConfigEntry<int> NumJailClicks;
